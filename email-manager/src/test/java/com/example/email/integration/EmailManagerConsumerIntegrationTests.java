@@ -20,6 +20,7 @@ import org.springframework.kafka.test.EmbeddedKafkaBroker;
 import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import java.util.Map;
@@ -31,6 +32,12 @@ import static org.mockito.Mockito.*;
 
 @SpringBootTest
 @EmbeddedKafka(topics = "${spring.kafka.topic.name}", partitions = 1)
+@TestPropertySource(properties = {
+        "spring.mail.host=smtp.example.com",
+        "spring.mail.port=587",
+        "spring.mail.username=seu_email@example.com",
+        "spring.mail.password=sua_senha"
+})
 @ActiveProfiles("test")
 @DirtiesContext
 public class EmailManagerConsumerIntegrationTests {
