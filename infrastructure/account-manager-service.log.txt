@@ -1,0 +1,570 @@
+account-manager-service-1  |    at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    ... 40 common frames omitted
+account-manager-service-1  | Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  |    at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    ... 53 common frames omitted
+account-manager-service-1  | Caused by: java.net.ConnectException: Connection refused
+account-manager-service-1  |    at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+account-manager-service-1  |    at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+account-manager-service-1  |    at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+account-manager-service-1  |    at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    ... 56 common frames omitted
+account-manager-service-1  | 
+account-manager-service-1  | 2025-05-12T20:20:50.773Z  WARN 1 --- [account-manager] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+account-manager-service-1  | 2025-05-12T20:20:50.857Z  INFO 1 --- [account-manager] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+account-manager-service-1  |    Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+account-manager-service-1  |    Database driver: undefined/unknown
+account-manager-service-1  |    Database version: 8.0
+account-manager-service-1  |    Autocommit mode: undefined/unknown
+account-manager-service-1  |    Isolation level: undefined/unknown
+account-manager-service-1  |    Minimum pool size: undefined/unknown
+account-manager-service-1  |    Maximum pool size: undefined/unknown
+^Ccanceled
+[eduardo.oliveira@192 infrastructure]$ ^C
+[eduardo.oliveira@192 infrastructure]$ ^C
+[eduardo.oliveira@192 infrastructure]$ ^C
+[eduardo.oliveira@192 infrastructure]$ ^C
+[eduardo.oliveira@192 infrastructure]$ ^C
+[eduardo.oliveira@192 infrastructure]$ ^C
+[eduardo.oliveira@192 infrastructure]$ ^C
+[eduardo.oliveira@192 infrastructure]$ ^C
+[eduardo.oliveira@192 infrastructure]$ docker-compose logs -f account-manager-service
+account-manager-service-1  | 
+account-manager-service-1  |   .   ____          _            __ _ _
+account-manager-service-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+account-manager-service-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+account-manager-service-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+account-manager-service-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+account-manager-service-1  |  =========|_|==============|___/=/_/_/_/
+account-manager-service-1  | 
+account-manager-service-1  |  :: Spring Boot ::                (v3.4.4)
+account-manager-service-1  | 
+account-manager-service-1  | 2025-05-12T20:20:30.258Z  INFO 1 --- [account-manager] [           main] c.e.account.AccountManagerApplication    : Starting AccountManagerApplication v0.0.1-SNAPSHOT using Java 21.0.7 with PID 1 (/app/app.jar started by root in /app)
+account-manager-service-1  | 2025-05-12T20:20:30.261Z  INFO 1 --- [account-manager] [           main] c.e.account.AccountManagerApplication    : No active profile set, falling back to 1 default profile: "default"
+account-manager-service-1  | 2025-05-12T20:20:39.455Z  INFO 1 --- [account-manager] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+account-manager-service-1  | 2025-05-12T20:20:39.856Z  INFO 1 --- [account-manager] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 305 ms. Found 1 JPA repository interface.
+account-manager-service-1  | 2025-05-12T20:20:43.862Z  INFO 1 --- [account-manager] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+account-manager-service-1  | 2025-05-12T20:20:43.957Z  INFO 1 --- [account-manager] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+account-manager-service-1  | 2025-05-12T20:20:43.957Z  INFO 1 --- [account-manager] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+account-manager-service-1  | 2025-05-12T20:20:44.558Z  INFO 1 --- [account-manager] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+account-manager-service-1  | 2025-05-12T20:20:44.559Z  INFO 1 --- [account-manager] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13597 ms
+account-manager-service-1  | 2025-05-12T20:20:46.759Z  INFO 1 --- [account-manager] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+account-manager-service-1  | 2025-05-12T20:20:47.155Z  INFO 1 --- [account-manager] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+account-manager-service-1  | 2025-05-12T20:20:47.458Z  INFO 1 --- [account-manager] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+account-manager-service-1  | 2025-05-12T20:20:48.856Z  INFO 1 --- [account-manager] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+account-manager-service-1  | 2025-05-12T20:20:49.062Z  INFO 1 --- [account-manager] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+account-manager-service-1  | 2025-05-12T20:20:50.753Z  WARN 1 --- [account-manager] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+account-manager-service-1  | 2025-05-12T20:20:50.754Z ERROR 1 --- [account-manager] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  | 2025-05-12T20:20:50.754Z  WARN 1 --- [account-manager] [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+account-manager-service-1  | 
+account-manager-service-1  | org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  |    at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at com.example.account.AccountManagerApplication.main(AccountManagerApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  | Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  |    at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    ... 40 common frames omitted
+account-manager-service-1  | Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  |    at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    ... 53 common frames omitted
+account-manager-service-1  | Caused by: java.net.ConnectException: Connection refused
+account-manager-service-1  |    at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+account-manager-service-1  |    at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+account-manager-service-1  |    at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+account-manager-service-1  |    at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    ... 56 common frames omitted
+account-manager-service-1  | 
+account-manager-service-1  | 2025-05-12T20:20:50.773Z  WARN 1 --- [account-manager] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+account-manager-service-1  | 2025-05-12T20:20:50.857Z  INFO 1 --- [account-manager] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+account-manager-service-1  |    Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+account-manager-service-1  |    Database driver: undefined/unknown
+account-manager-service-1  |    Database version: 8.0
+account-manager-service-1  |    Autocommit mode: undefined/unknown
+account-manager-service-1  |    Isolation level: undefined/unknown
+account-manager-service-1  |    Minimum pool size: undefined/unknown
+account-manager-service-1  |    Maximum pool size: undefined/unknown
+account-manager-service-1  | 2025-05-12T20:20:54.854Z  INFO 1 --- [account-manager] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+account-manager-service-1  | 2025-05-12T20:20:54.868Z  INFO 1 --- [account-manager] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+account-manager-service-1  | 2025-05-12T20:20:55.869Z  WARN 1 --- [account-manager] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+account-manager-service-1  | 2025-05-12T20:20:55.869Z ERROR 1 --- [account-manager] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  | 2025-05-12T20:20:55.872Z ERROR 1 --- [account-manager] [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  | 2025-05-12T20:20:55.872Z  WARN 1 --- [account-manager] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  | 2025-05-12T20:20:55.873Z  INFO 1 --- [account-manager] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+account-manager-service-1  | 2025-05-12T20:20:55.880Z  INFO 1 --- [account-manager] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+account-manager-service-1  | 
+account-manager-service-1  | Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+account-manager-service-1  | 2025-05-12T20:20:55.950Z ERROR 1 --- [account-manager] [           main] o.s.boot.SpringApplication               : Application run failed
+account-manager-service-1  | 
+account-manager-service-1  | org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at com.example.account.AccountManagerApplication.main(AccountManagerApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  | Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    ... 20 common frames omitted
+account-manager-service-1  | Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  |    at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:65) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:233) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+account-manager-service-1  |    at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    ... 24 common frames omitted
+account-manager-service-1  | Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  |    at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    ... 45 common frames omitted
+account-manager-service-1  | Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  |    at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    ... 58 common frames omitted
+account-manager-service-1  | Caused by: java.net.ConnectException: Connection refused
+account-manager-service-1  |    at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+account-manager-service-1  |    at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+account-manager-service-1  |    at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+account-manager-service-1  |    at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    ... 61 common frames omitted
+account-manager-service-1  | 
+account-manager-service-1  | 
+account-manager-service-1  |   .   ____          _            __ _ _
+account-manager-service-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+account-manager-service-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+account-manager-service-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+account-manager-service-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+account-manager-service-1  |  =========|_|==============|___/=/_/_/_/
+account-manager-service-1  | 
+account-manager-service-1  |  :: Spring Boot ::                (v3.4.4)
+account-manager-service-1  | 
+account-manager-service-1  | 2025-05-12T20:21:59.820Z  INFO 1 --- [account-manager] [           main] c.e.account.AccountManagerApplication    : Starting AccountManagerApplication v0.0.1-SNAPSHOT using Java 21.0.7 with PID 1 (/app/app.jar started by root in /app)
+account-manager-service-1  | 2025-05-12T20:21:59.823Z  INFO 1 --- [account-manager] [           main] c.e.account.AccountManagerApplication    : No active profile set, falling back to 1 default profile: "default"
+account-manager-service-1  | 2025-05-12T20:22:07.028Z  INFO 1 --- [account-manager] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+account-manager-service-1  | 2025-05-12T20:22:07.718Z  INFO 1 --- [account-manager] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 593 ms. Found 1 JPA repository interface.
+account-manager-service-1  | 2025-05-12T20:22:14.019Z  INFO 1 --- [account-manager] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+account-manager-service-1  | 2025-05-12T20:22:14.124Z  INFO 1 --- [account-manager] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+account-manager-service-1  | 2025-05-12T20:22:14.124Z  INFO 1 --- [account-manager] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+account-manager-service-1  | 2025-05-12T20:22:15.213Z  INFO 1 --- [account-manager] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+account-manager-service-1  | 2025-05-12T20:22:15.214Z  INFO 1 --- [account-manager] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14896 ms
+account-manager-service-1  | 2025-05-12T20:22:18.215Z  INFO 1 --- [account-manager] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+account-manager-service-1  | 2025-05-12T20:22:18.920Z  INFO 1 --- [account-manager] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+account-manager-service-1  | 2025-05-12T20:22:19.216Z  INFO 1 --- [account-manager] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+account-manager-service-1  | 2025-05-12T20:22:22.114Z  INFO 1 --- [account-manager] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+account-manager-service-1  | 2025-05-12T20:22:22.323Z  INFO 1 --- [account-manager] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+account-manager-service-1  | 2025-05-12T20:22:24.127Z  WARN 1 --- [account-manager] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+account-manager-service-1  | 2025-05-12T20:22:24.127Z ERROR 1 --- [account-manager] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  | 2025-05-12T20:22:24.128Z  WARN 1 --- [account-manager] [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+account-manager-service-1  | 
+account-manager-service-1  | org.hibernate.exception.JDBCConnectionException: unable to obtain isolated JDBC connection [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  |    at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1442) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1513) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at com.example.account.AccountManagerApplication.main(AccountManagerApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  | Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  |    at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    ... 40 common frames omitted
+account-manager-service-1  | Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  |    at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    ... 53 common frames omitted
+account-manager-service-1  | Caused by: java.net.ConnectException: Connection refused
+account-manager-service-1  |    at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+account-manager-service-1  |    at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+account-manager-service-1  |    at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+account-manager-service-1  |    at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    ... 56 common frames omitted
+account-manager-service-1  | 
+account-manager-service-1  | 2025-05-12T20:22:24.228Z  WARN 1 --- [account-manager] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+account-manager-service-1  | 2025-05-12T20:22:24.313Z  INFO 1 --- [account-manager] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+account-manager-service-1  |    Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+account-manager-service-1  |    Database driver: undefined/unknown
+account-manager-service-1  |    Database version: 8.0
+account-manager-service-1  |    Autocommit mode: undefined/unknown
+account-manager-service-1  |    Isolation level: undefined/unknown
+account-manager-service-1  |    Minimum pool size: undefined/unknown
+account-manager-service-1  |    Maximum pool size: undefined/unknown
+account-manager-service-1  | 2025-05-12T20:22:29.837Z  INFO 1 --- [account-manager] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+account-manager-service-1  | 2025-05-12T20:22:30.017Z  INFO 1 --- [account-manager] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+account-manager-service-1  | 2025-05-12T20:22:31.021Z  WARN 1 --- [account-manager] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+account-manager-service-1  | 2025-05-12T20:22:31.021Z ERROR 1 --- [account-manager] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  | 2025-05-12T20:22:31.027Z ERROR 1 --- [account-manager] [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  | 2025-05-12T20:22:31.028Z  WARN 1 --- [account-manager] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  | 2025-05-12T20:22:31.031Z  INFO 1 --- [account-manager] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+account-manager-service-1  | 2025-05-12T20:22:31.213Z  INFO 1 --- [account-manager] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+account-manager-service-1  | 
+account-manager-service-1  | Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+account-manager-service-1  | 2025-05-12T20:22:31.315Z ERROR 1 --- [account-manager] [           main] o.s.boot.SpringApplication               : Application run failed
+account-manager-service-1  | 
+account-manager-service-1  | org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.4.jar!/:3.4.4]
+account-manager-service-1  |    at com.example.account.AccountManagerApplication.main(AccountManagerApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  |    at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[app.jar:0.0.1-SNAPSHOT]
+account-manager-service-1  | Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    ... 20 common frames omitted
+account-manager-service-1  | Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+account-manager-service-1  |    at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:65) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:233) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+account-manager-service-1  |    at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar!/:6.2.5]
+account-manager-service-1  |    ... 24 common frames omitted
+account-manager-service-1  | Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  |    at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar!/:na]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.6.11.Final.jar!/:6.6.11.Final]
+account-manager-service-1  |    ... 45 common frames omitted
+account-manager-service-1  | Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+account-manager-service-1  | 
+account-manager-service-1  | The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+account-manager-service-1  |    at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+account-manager-service-1  |    at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    ... 58 common frames omitted
+account-manager-service-1  | Caused by: java.net.ConnectException: Connection refused
+account-manager-service-1  |    at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+account-manager-service-1  |    at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+account-manager-service-1  |    at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+account-manager-service-1  |    at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+account-manager-service-1  |    at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.1.0.jar!/:9.1.0]
+account-manager-service-1  |    ... 61 common frames omitted
+account-manager-service-1  | 
+account-manager-service-1 exited with code 1
