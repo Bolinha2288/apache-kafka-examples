@@ -1,6 +1,7 @@
 package com.example.users.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
@@ -12,6 +13,7 @@ import java.util.UUID;
 public class UserDTO{
 
         @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+        @Schema(hidden = true)
         private Long id;
 
         @JsonProperty(access = JsonProperty.Access.READ_ONLY)
