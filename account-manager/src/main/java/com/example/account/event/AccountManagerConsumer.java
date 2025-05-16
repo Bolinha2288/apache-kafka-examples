@@ -26,14 +26,19 @@ public class AccountManagerConsumer {
     public void consumeEvent(UserEventDTO userEventDTO) {
         log.info("User event received in account-manager service {}", userEventDTO);
 
-        Account account = new Account();
-        account.setUserReference(userEventDTO.getUserDTO().getIdReference());
-        account.setNumberAccount(accountNumber.generate(userEventDTO.getUserDTO().getIdReference()));
-        account.setName(userEventDTO.getUserDTO().getName());
+        Account account = createAccount(userEventDTO);
 
         accountRepository.save(account);
 
         log.info("Account created successfully {}", account);
+    }
+
+    private Account createAccount(UserEventDTO userEventDTO) {
+        Account account = new Account();
+        account.setUserReference(userEventDTO.getUserDTO().getIdReference());
+        account.setNumberAccount(accountNumber.generate(userEventDTO.getUserDTO().getIdReference()));
+        account.setName(userEventDTO.getUserDTO().getName());
+        return account;
     }
 
 }
