@@ -44,3 +44,6 @@ This project consists of multiple services (`email-manager`, `account-manager`, 
 2. Checking a topic created, consumers created, and messages received in Apache Kafka:
 
     - **Kafka UI:** http://localhost:8000
+
+
+> 📚 **Read more:** See the complete article on Medium: [Compreendendo Mensagerias](https://medium.com/@eduardo.borsato.oli/compreendendo-mensagerias-b62ed73ebc9a)
